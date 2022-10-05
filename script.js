@@ -1,6 +1,15 @@
 const input = document.querySelector(".search");
+const container = document.querySelector('.container');
 
-
+document.querySelector('.fa-magnifying-glass').onclick =( ) => {
+  apiRequest()
+  container.innerHTML = "";
+}
+input.onkeydown = (key) => {
+  if(key.code == 'Enter'){
+    apiRequest()
+  }
+}
 
 apiRequest = () => {
   const url =
@@ -26,7 +35,6 @@ for ( let i = 0; i < data.results.length; i++)
   let image = document.createElement("div");
     image.className = "img";
     image.style.backgroundImage =  "url("+data.results[i].urls.raw + "&w=1366&h=768"+")";
-    document.querySelector('.container').appendChild(image);
+    container.appendChild(image);
 }
 }
-apiRequest()
