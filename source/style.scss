@@ -1,1 +1,42 @@
 @import 'zerostyle.scss';
+.header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 4px solid orange;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+.search-form{
+    display: flex;
+   justify-content: space-between; 
+   width: 250px;
+}
+.search{
+    font-size: 25px;
+    border: 2px solid black;
+    width: 200px;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.img{
+    width: 380px;
+    height: 214px;
+    margin-top: 15px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    cursor: pointer;
+}
